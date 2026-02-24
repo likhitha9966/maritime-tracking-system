@@ -1,0 +1,77 @@
+{
+	"info": {
+		"name": "Maritime Tracking System API",
+		"description": "API Collection for Fleet Management Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"likhitha\",\n  \"password\": \"1234\",\n  \"role\": \"Admin\"\n}",
+					"options": { "json": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:5000/api/auth/register" }
+			}
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"likhitha\",\n  \"password\": \"1234\"\n}",
+					"options": { "json": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:5000/api/auth/login" }
+			}
+		},
+		{
+			"name": "Get All Vessels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": { "raw": "http://localhost:5000/api/vessels" }
+			}
+		},
+		{
+			"name": "Add New Vessel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vesselId\": \"V-101\",\n  \"name\": \"Ocean Explorer\",\n  \"type\": \"Cargo\",\n  \"latitude\": 15.5,\n  \"longitude\": 73.0,\n  \"speed\": 22\n}",
+					"options": { "json": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:5000/api/vessels" }
+			}
+		},
+		{
+			"name": "Update Vessel Status",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"Docked\"\n}",
+					"options": { "json": { "language": "json" } }
+				},
+				"url": { "raw": "http://localhost:5000/api/vessels/REPLACE_WITH_ID/status" }
+			}
+		},
+		{
+			"name": "Delete Vessel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": { "raw": "http://localhost:5000/api/vessels/REPLACE_WITH_ID" }
+			}
+		}
+	]
+}
